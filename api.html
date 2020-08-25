@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<!-- <script
+	src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+	integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+	crossorigin="anonymous"></script> -->
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	
+	<script type="text/javascript" src="scripts/shCore.js"></script>
+	<script type="text/javascript" src="scripts/shAutoloader.js"></script>
+	<script type="text/javascript" src="scripts/shBrushAppleScript.js"></script>
+	<script type="text/javascript" src="scripts/shBrushAS3.js"></script>
+	<script type="text/javascript" src="scripts/shBrushBash.js"></script>
+	<script type="text/javascript" src="scripts/shBrushColdFusion.js"></script>
+	<script type="text/javascript" src="scripts/shBrushCpp.js"></script>
+	<script type="text/javascript" src="scripts/shBrushCSharp.js"></script>
+	<script type="text/javascript" src="scripts/shBrushCss.js"></script>
+	<script type="text/javascript" src="scripts/shBrushDelphi.js"></script>
+	<script type="text/javascript" src="scripts/shBrushDiff.js"></script>
+	<script type="text/javascript" src="scripts/shBrushErlang.js"></script>
+	<script type="text/javascript" src="scripts/shBrushGroovy.js"></script>
+	<script type="text/javascript" src="scripts/shBrushJava.js"></script>
+	<script type="text/javascript" src="scripts/shBrushJavaFX.js"></script>
+	<script type="text/javascript" src="scripts/shBrushJScript.js"></script>
+	<script type="text/javascript" src="scripts/shBrushPerl.js"></script>
+	<script type="text/javascript" src="scripts/shBrushPhp.js"></script>
+	<script type="text/javascript" src="scripts/shBrushPlain.js"></script>
+	<script type="text/javascript" src="scripts/shBrushPowerShell.js"></script>
+	<script type="text/javascript" src="scripts/shBrushPython.js"></script>
+	<script type="text/javascript" src="scripts/shBrushRuby.js"></script>
+	<script type="text/javascript" src="scripts/shBrushSass.js"></script>
+	<script type="text/javascript" src="scripts/shBrushScala.js"></script>
+	<script type="text/javascript" src="scripts/shBrushSql.js"></script>
+	<script type="text/javascript" src="scripts/shBrushVb.js"></script>
+	<script type="text/javascript" src="scripts/shBrushXml.js"></script>
+	<script type="text/javascript" src="scripts/shLegacy.js"></script>
+	<link type="text/css" rel="stylesheet" href="styles/shCoreDefault.css">
+	<link type="text/css" rel="stylesheet" href="styles/shThemeDefault.css">
+	<script type="text/javascript"> SyntaxHighlighter.all(); </script>
+	<style>
+		.syntaxhighlighter{
+			margin-bottom: 0 !important;
+			border: 1px solid #eee;
+			border-bottom-width: 0 !important;
+			padding-top: 10px !important;
+			overflow-y: hidden !important;
+		}
+		p{
+			border: 1px solid #eee;
+			border-top-width: 0;
+			margin-top: 0;
+			padding: 20px;
+		}
+	</style>
+</head>
+<body>
+	<h1>설치</h1>
+	<pre class="brush:javascript">var Utils = new Utils();</pre>
+	<h2>list</h2>
+	<pre class="brush:javascript">
+	$(window).on('scroll', function (event) {
+		$('div').each(function (index, element) {
+			Utils.scrollshow($(this))
+		})
+		// console.log(Utils.isElementInView($('.abc'),100))
+		// if(Utils.isElementInView($('.abc'),100)){
+		// 	$('.abc').addClass('active')
+		// }
+	})
+	.trigger('scroll')
+	</pre>
+	<pre class="brush:scss">
+		div {
+			border: 1px solid #000;
+			opacity: 0;
+			transition: all 0.5s ease-in-out;
+			transform: translateY(80px);
+			&.visible {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+		
+	</pre>
+	<p>
+		스크롤시 셀렉터 대상이 화면(브라우저 가시영역) 노출되는 경우 'visible' class가 추가됨.
+		<br>
+		💬 애니메이션은 스타일에서 선언함.
+
+	</p>
+	<pre class="brush:javascript">Utils.isElementInView($('.abc'),100)</pre>
+	<p>
+		isElementInView(셀렉터,화면높이%)
+	</p>
+	<pre class="brush:javascript">Utils.popupW('http://unpl.co.kr','unpl',500,500,'yes','yes',3)</pre>
+	<p>
+		팝업(주소,팝업창이름, 넓이, 높이, 스크롤여부(yes, no), 창크기조절여부(yes, no), 창위치 - (1:일반, 2:위쪽모서리, 3:정중앙))
+		
+	</p>
+	<pre class="brush:javascript">Utils.rowspan('#table',0)</pre>
+	<p>
+		테이블 0번째 <strong>행</strong> 셀의 내용이 같으면 합치기
+	</p>
+	<pre class="brush:javascript">Utils.colspan('#table',0)</pre>
+	<p>
+		테이블 0번째 <strong>열</strong> 셀의 내용이 같으면 합치기
+	</p>
+	<pre class="brush:javascript">Utils.quickmenu('#quickmenu',250)</pre>
+	<p>
+		셀렉터 탑 고정 quickmenu(셀렉터, 탑높이:기본값 70 int)
+	</p>
+<div id="quickmenu" style="right: 1rem;"><a href="#">quick</a></div>
+	
+
+
+	<h1>참고 정의사항</h1>
+	상태가 유동적으로 변하는경우 | active
+	상태값이 고정되는 경우 | on
+
+	<hr>
+
+	<pre class="brush:html">
+		<ul class="floatvertical">
+			<li class="item">abc1</li>
+			<li class="item">abc2</li>
+			<li class="item">abc3</li>
+			<li class="item">abc4</li>
+			<li class="item">abc5</li>
+			<li class="item">abc6</li>
+			<li class="item">abc7</li>
+			<li class="item">abc8</li>
+			<li class="item">abc9</li>
+			<li class="item">abc10</li>
+			<li class="item">abc11</li>
+			<li class="item">abc12</li>
+		</ul>
+		<style>
+			.item-set{height: 150px;border: 1px solid #000;position: relative;}
+			.item-set .item{border: 1px dashed red;width: 350px;}
+		</style>
+	</pre>
+	<pre class="brush:javascript">
+		Utils.floatvertical('.item-set')
+		Utils.floatvertical(셀렉터,left||right default : left)
+	</pre>
+	<ul class="item-set">
+		<li class="item">abc1</li>
+		<li class="item">abc2</li>
+		<li class="item">abc3</li>
+		<li class="item">abc4</li>
+		<li class="item">abc5</li>
+		<li class="item">abc6</li>
+		<li class="item">abc7</li>
+		<li class="item">abc8</li>
+		<li class="item">abc9</li>
+		<li class="item">abc10</li>
+		<li class="item">abc11</li>
+		<li class="item">abc12</li>
+	</ul>
+	<style>
+		.item-set{height: 150px;border: 1px solid #000;position: relative;}
+		.item-set .item{border: 1px dashed red;width: 350px;}
+	</style>
+	<script src="utils.js"></script>
+	<script>
+		var Utils = new Utils();
+		Utils.quickmenu('#quickmenu',250)
+		Utils.floatvertical('.item-set','right')
+		// $('#quickmenu').animate({ "left": "+=50px" }, "slow" );
+	</script>
+	
+</body>
+
+</html>
